@@ -1,0 +1,17 @@
+.accordion-collapse{
+    overflow: auto;
+    // fixed height to constrain on scrolling
+    height: 300px !important;
+}
+.accordion-body {
+    cursor: pointer; 
+}
+.accordion-body strong{
+    transition: all 0.3s;
+}
+
+.accordion-body:hover strong{
+    color: blue;
+    font-weight: bold;
+    font-size: 1.1rem;
+}

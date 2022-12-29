@@ -1,0 +1,18 @@
+<aside class="accordion my-4" id="accordionExample">
+    <div class="accordion-item shadow-sm rounded-0 ">
+        <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button text-capitalize fw-bold text-info" type="button" data-bs-toggle="collapse"
+                data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                Online Users
+            </button>
+        </h2>
+
+        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#accordionExample">
+
+            <div class="accordion-body text-capitalize fw-light fs-6" *ngFor="let user of users">
+                <strong>{{user.name}}</strong>
+            </div> 
+        </div>
+    </div>
+</aside>

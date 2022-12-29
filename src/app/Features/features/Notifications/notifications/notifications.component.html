@@ -1,0 +1,23 @@
+<section class="notification border shadow-sm rounded-0 my-4 p-3">
+  <h3 class="text-capitalize fw-bolder text-info fs-5 mb-4">send notifications</h3>
+  <form #form="ngForm" (ngSubmit)="logForm(form)" novalidate>
+    <div class="mb-3">
+      <input [(ngModel)]="notification.title" name="title" type="text" class="form-control rounded-0" id="exampleFormControlInput1"
+        placeholder="Enter Notification Title">
+    </div>
+    <div class="mb-3">
+      <textarea [(ngModel)]="notification.message" name="message" class="form-control rounded-0" id="exampleFormControlTextarea1" rows="3"
+        placeholder="Enter Notification Message"></textarea>
+    </div>
+
+    <div>
+      <select class="form-select rounded-0" [(ngModel)]="notification.sendTo" name="sendTo">
+        <option [value]="user.name" *ngFor="let user of users">{{user.name}}</option>
+      </select>
+    </div>
+    <div class="d-flex justify-content-center mt-4">
+      <button type="button" class="btn btn-outline-info rounded-0" (click)="handelNotification()">Submit</button>
+    </div>
+  </form>
+
+</section>
